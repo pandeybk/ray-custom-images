@@ -194,8 +194,11 @@ spec:
             - key: odh-ca-bundle.crt
               path: odh-ca-bundle.crt
             optional: true
-        - nfs:
-            path: ""
-            server: ""
-            readOnly: true
+        # - nfs:
+        #     path: ""
+        #     server: ""
+        #     readOnly: true
+        #   name: shared-pvc
+        - persistentVolumeClaim:
+            claimName: shared-pvc
           name: shared-pvc
